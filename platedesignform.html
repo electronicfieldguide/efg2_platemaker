@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1">
+<head>
+<title>Plate Maker - printable PDFs for your EFGs</title>
+<link href="platemaker.css" rel="stylesheet" type="text/css" />
+<script src="ecritterz_biz_colorpicker.js" type="text/javascript">
+</script>
+</head>
+<body>
+<form name="pdfmakerform" action="upload" method="post" enctype="multipart/form-data">
+<table class="menubartitle">
+<tr>
+<td class="menubartitle">Plate Maker:</td>
+<td class="menubarsubtitle">printable pdfs for your EFGs</td>
+</tr>
+</table>
+
+<table class="menubarcase">
+<tr>
+<td>
+<table class="menubar">
+<tr>
+<td class="menubartext">Select<br />
+ Datasource</td>
+<td class="menubaricon"><img src="bluearrow.png" width="35" height="35" border="0" alt="arrow" /></td>
+<td class="menubartext">Query<br />
+ Data</td>
+<td class="menubaricon"><img src="bluearrow.png" width="35" height="35" border="0" alt="arrow" /></td>
+<td class="menubartextactive">Design the<br />
+ Plate</td>
+<td class="menubaricon"><img src="bluearrow.png" width="35" height="35" border="0" alt="arrow" /></td>
+<td class="menubartext">Save/Print</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<table class="form">
+<tr>
+<td class="datasourcename" colspan="2">EFG selected: <!-- Name of selected datasource would go here --></td>
+</tr>
+
+<tr>
+<td class="formitem" colspan="2">Query results: <!-- list query results (number of taxa returned, items searched) --></td>
+</tr>
+
+<tr>
+<td class="instructions" colspan="2">Design your plates using the items below. Anything that you leave blank will not appear on the plates.</td>
+</tr>
+
+<tr colspan="2">
+<td class="subheading">General Settings</td>
+</tr>
+
+<tr>
+<td class="formitem"><span class="configitem">Sort by:</span> <select name="sortby"><!-- Populate with column headings from datasource -->
+<option value="family">                                                            Family
+</option>
+<option value="genus">                                                            Genus
+</option>
+<option value="flowercolor">                                                            Flower Color
+</option>
+</select></td>
+<td class="formitem" colspan="2"><span class="configitem">Image to display:</span> <select name="imagecolumn"><!-- Show only image fields -->
+<option value="flower">                                                            Flower
+</option>
+<option value="fruit">                                                            Fruit
+</option>
+<option value="dorsalview">                                                            Dorsal View
+</option>
+<option value="ventralview">                                                            Ventral View
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="formitem">Dimensions <span class="note">(Min 1, Max 100)</span>:<br />
+ <span class="configitem">Rows:</span> <input type="text" name="rows" size="3" maxlength="3" value="4" /> <span class="configitem">Columns:</span> <input type="text" name="columns" size="3"
+maxlength="3" value="4" /></td>
+<td class="formitem" colspan="2"><span class="configitem">Paper size:</span> <select name="papersize">
+<option value="8.5x11">                                                            8.5" x 11"
+</option>
+<option value="8.5x14">                                                            8.5" x 14"
+</option>
+<option value="11x17">                                                            11" x 17"
+</option>
+<option value="A4">                                                            A4
+</option>
+<option value="3x5">                                                            3" x 5"
+</option>
+<option value="4x6">                                                            4" x 6"
+</option>
+<option value="5x7">                                                            5" x 7"
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="formitem" colspan="2">If you would like to use custom fonts, point to the location of the fonts folder on your hard drive or the server:<br />
+ <input type="file" name="logo1" size="25" /> <!-- Not sure if type="file" is right here --></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<hr />
+</td>
+</tr>
+
+<tr colspan="2">
+<td class="subheading">Text Settings</td>
+</tr>
+
+<tr>
+<td class="formitem" colspan="2">Caption: <input type="CHECKBOX" name="captionposition" value="above" /><span class="configitem">above image</span> <input type="CHECKBOX" name="captionposition"
+value="below" /><span class="configitem">below image</span> 
+
+<p>Row 1: <select name="captiontext1"><!-- Show text fields -->
+<option value="Family">                                                                  Family
+</option>
+<option value="Genus">                                                                  Genus
+</option>
+<option value="Common Name">                                                                  Common Name
+</option>
+</select> <select name="captiontext1font"><!-- Show built in fonts? -->
+<option value="Arial">                                                                  Arial
+</option>
+<option value="Times">                                                                  Times
+</option>
+</select> <span class="configitem">Font Size</span> <span class="note">(from 6pt to 100pt)</span>: <input type="text" name="captiontext1size" size="2" maxlength="3" value="10" /> <input type=
+"CHECKBOX" name="captiontext1format" value="bold" /><b>bold</b> <input type="CHECKBOX" name="captiontext1format" value="italics" /><i>italics</i> <input type="CHECKBOX" name="captiontext1format"
+value="underline" /><u>underline</u></p>
+
+<p>Row 2: <select name="captiontext2"><!-- Show text fields -->
+<option value="Family">                                                                  Family
+</option>
+<option value="Genus">                                                                  Genus
+</option>
+<option value="Common Name">                                                                  Common Name
+</option>
+</select> <select name="captiontext2font"><!-- Show built in fonts? -->
+<option value="Arial">                                                                  Arial
+</option>
+<option value="Times">                                                                  Times
+</option>
+</select> <span class="configitem">Font Size</span> <span class="note">(from 6pt to 100pt)</span>: <input type="text" name="captiontext2size" size="2" maxlength="3" value="10" /> <input type=
+"CHECKBOX" name="captiontext2format" value="bold" /><b>bold</b> <input type="CHECKBOX" name="captiontext2format" value="italics" /><i>italics</i> <input type="CHECKBOX" name="captiontext2format"
+value="underline" /><u>underline</u></p>
+</td>
+</tr>
+
+<tr>
+<td class="formitem" colspan="2"><input type="text" name="title" size="50" value="Main Title Goes Here" /> 
+<!-- I want the default text to disappear as soon as the author clicks in that text window but I do not know how to do that --> <span class="configitem">Font Size</span> <span class="note">(from 6pt
+to 100pt)</span>: <input type="text" name="titlesize" size="2" maxlength="3" value="10" /> <input type="CHECKBOX" name="titleformat" value="bold" /><b>bold</b> <input type="CHECKBOX" name=
+"titleformat" value="italics" /><i>italics</i> <input type="CHECKBOX" name="titleformat" value="underline" /><u>underline</u></td>
+</tr>
+
+<tr>
+<td class="formitem" colspan="2"><input type="text" name="subtitle" size="50" value="Subtitle Goes Here" /> 
+<!-- I want the default text to disappear as soon as the author clicks in that text window but I do not know how to do that --> <span class="configitem">Font Size</span> <span class="note">(from 6pt
+to 100pt)</span>: <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="CHECKBOX" name="subtitleformat" value="bold" /><b>bold</b> <input type="CHECKBOX" name= 
+"subtitleformat" value="italics" /><i>italics</i> <input type="CHECKBOX" name="subtitleformat" value="underline" /><u>underline</u></td>
+</tr>
+
+<tr>
+<td class="formitem" colspan="2"><input type="text" name="credits1" size="50" value="Credits/Copyright Info Goes Here" /> 
+<!-- I want the default text to disappear as soon as the author clicks in that text window but I do not know how to do that --> <span class="configitem">Font Size</span> <span class="note">(from 6pt
+to 100pt)</span>: <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="CHECKBOX" name="credits1format" value="bold" /><b>bold</b> <input type="CHECKBOX" name= 
+"credits1format" value="italics" /><i>italics</i> <input type="CHECKBOX" name="credits1format" value="underline" /><u>underline</u></td>
+</tr>
+
+<tr>
+<td class="formitem" colspan="2"><input type="text" name="credits2" size="50" value="Credits/Copyright Info Goes Here" /> 
+<!-- I want the default text to disappear as soon as the author clicks in that text window but I do not know how to do that --> <span class="configitem">Font Size</span> <span class="note">(from 6pt
+to 100pt)</span>: <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="CHECKBOX" name="credits2format" value="bold" /><b>bold</b> <input type="CHECKBOX" name= 
+"credits2format" value="italics" /><i>italics</i> <input type="CHECKBOX" name="credits2format" value="underline" /><u>underline</u></td>
+</tr>
+
+<tr>
+<td class="formitem" colspan="2">Upload pre-sized images to use as logos in the credits section <span class="note">(must be .jpg, .gif or .png format, less than 1 inch print size
+recommended)</span>:<br />
+ <!-- It would be good if the user was not allowed to upload something that is not in one of these three file formats --> <input type="file" name="logo1" size="25" /><br />
+ <input type="file" name="logo2" size="25" /><br />
+ <input type="file" name="logo3" size="25" /></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<hr />
+</td>
+</tr>
+
+<tr colspan="2">
+<td class="subheading">Image and Color Settings</td>
+</tr>
+
+<tr>
+<td class="formitem">White space around image: <select name="imagewhitespace">
+<option value="0 (none)">                                                            0 (none)
+</option>
+<option value="1">                                                            1
+</option>
+<option value="2">                                                            2
+</option>
+<option value="3">                                                            3
+</option>
+<option value="4">                                                            4
+</option>
+<option value="5">                                                            5
+</option>
+</select></td>
+<td class="formitem">White space between elements <span class="note">(image plus captions)</span>: <select name="elementwhitespace">
+<option value="0 (none)">                                                            0 (none)
+</option>
+<option value="1">                                                            1
+</option>
+<option value="2">                                                            2
+</option>
+<option value="3">                                                            3
+</option>
+<option value="4">                                                            4
+</option>
+<option value="5">                                                            5
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="formitem">Frame around image:<br />
+<br />
+ <span class="configitem">Weight:</span> <select name="imageframeweight">
+<option value="0 (none)">                                                            0 (none)
+</option>
+<option value="1">                                                            1
+</option>
+<option value="2">                                                            2
+</option>
+<option value="3">                                                            3
+</option>
+<option value="4">                                                            4
+</option>
+<option value="5">                                                            5
+</option>
+</select><br />
+ <span class="configitem">Select a color:</span> <input type="text" name="imageframecolor" class="color" value="#35437C" /></td>
+<td class="formitem">Bounding Box <span class="note">(frame image plus captions)</span>:<br />
+<br />
+ <span class="configitem">Weight:</span> <select name="boundingboxweight">
+<option value="0 (none)">                                                            0 (none)
+</option>
+<option value="1">                                                            1
+</option>
+<option value="2">                                                            2
+</option>
+<option value="3">                                                            3
+</option>
+<option value="4">                                                            4
+</option>
+<option value="5">                                                            5
+</option>
+</select><br />
+ <span class="configitem">Select a color: <span><input type="text" name="boundingboxcolor" class="color" value="#57BA6B" /></span></span></td>
+</tr>
+
+<tr>
+<td class="formitem" colspan="2">Fill space around disproportionate images? <input type="CHECKBOX" name="fillbackground" value="above" /><span class="configitem">yes</span><br />
+<span class="note">Select a color:</span> <input type="text" name="boundingboxcolor" class="color" value="#E5E4D4" /></td>
+</tr>
+</table>
+
+<input type="submit" name="Submit" value="Submit" /></form>
+</body>
+</html>
+

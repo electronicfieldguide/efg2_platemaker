@@ -70,11 +70,11 @@ td.menubaricon {
 padding-left: 8px;
 padding-right: 8px;
 }
-a.menubartext {
+a {
 color: #003300;
 text-decoration: none;
 }
-a.menubartext:hover {
+a:hover {
 color: #000000;
 text-decoration: underline;
 }

@@ -21,13 +21,13 @@
 <td>
 <table class="menubar">
 <tr>
-<td class="menubartextactive"><a href="platechoosedata.html">Select<br />
+<td class="menubartext"><a href="platechoosedata.html">Select<br />
  Datasource</a></td>
 <td class="menubaricon"><img src="bluearrow.png" width="35" height="35" border="0" alt="arrow" /></td>
 <td class="menubartext"><a href="platequerydata.html">Query<br />
  Data</a></td>
 <td class="menubaricon"><img src="bluearrow.png" width="35" height="35" border="0" alt="arrow" /></td>
-<td class="menubartext"><a href="platedesignform.html">Design the<br />
+<td class="menubartextactive"><a href="platedesignform.html">Design the<br />
  Plate</a></td>
 <td class="menubaricon"><img src="bluearrow.png" width="35" height="35" border="0" alt="arrow" /></td>
 <td class="menubartext"><a href="platesaveorprint.html">Save/Print</a></td>
@@ -97,10 +97,12 @@ maxlength="3" value="4" /></td>
 </select></td>
 </tr>
 
-<tr>
-<td class="formitem" colspan="2">If you would like to use custom fonts, point to the location of the fonts folder on your hard drive or the server:<br />
- <input type="file" name="logo1" size="25" /> <!-- Not sure if type="file" is right here --></td>
-</tr>
+<!-- submitting enhancement request for the following: -->
+<!-- <tr> -->
+<!-- <td class="formitem" colspan="2">If you would like to use custom fonts, point to the location of the fonts folder on your hard drive or the server:<br /> -->
+<!--  <input type="file" name="logo1" size="25" /> </td> -->
+<!-- Not sure if type="file" is right here -->
+<!-- </tr>  -->
 
 <tr>
 <td colspan="2">
@@ -115,7 +117,6 @@ maxlength="3" value="4" /></td>
 <tr>
 <td class="formitem" colspan="2">Captions: <span class="configitem"><input type="RADIO" name="captionposition" value="above" />above image</span> <span class="configitem"><input type="RADIO" name= 
 "captionposition" value="below" />below image</span> 
-
 <p class="captionrow"><span class="configitem">Text for Row 1:</span> <select name="captiontext1"><!-- Show text fields -->
 <option value="Family">                                                                 Family
 </option>
@@ -203,14 +204,6 @@ class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext2for
 </tr>
 
 <tr>
-<td class="formitem" colspan="2">Upload pre-sized images to use as logos in the credits section <span class="note">(must be .jpg, .gif or .png format, less than 1 inch print size
-recommended):</span><br />
- <!-- It would be good if the user was not allowed to upload something that is not in one of these three file formats --> <input type="file" name="logo1" size="25" /><br />
- <input type="file" name="logo2" size="25" /><br />
- <input type="file" name="logo3" size="25" /></td>
-</tr>
-
-<tr>
 <td colspan="2">
 <hr />
 </td>
@@ -219,6 +212,37 @@ recommended):</span><br />
 <tr colspan="2">
 <td class="subheading">Image and Color Settings</td>
 </tr>
+
+<tr>
+<td class="formitem" COLSPAN="2">Add pre-sized images to use as logos in the credits section <span class="note">(must be .jpg, .gif or .png format, less than 1 inch print size recommended):</span><br>
+<select name="sortby" SIZE="5"><!-- Populate with images that have been uploaded -->
+<option value="logo1">logo1
+</option>
+<option value="logo2">logo2
+</option>
+<option value="logo3">logo3
+</option>
+<option value="logo3">logo4
+</option>
+<option value="logo3">logo5
+</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td class="uploadnote" COLSPAN="2">(To select multiple images, hold down the Ctrl key. To add additional images, use the <a class="upload" href="/efg2/imageUpload.jsp" target="_blank">Upload interface</a>.)</span> <!-- Link is to image upload page from efg2 config interface-->
+</td>
+</tr>
+
+<!-- submitting the following as an enhancement request -->
+<!-- <tr> -->
+<!-- <td class="formitem" colspan="2">Upload pre-sized images to use as logos in the credits section <span class="note">(must be .jpg, .gif or .png format, less than 1 inch print size recommended):</span><br /> -->
+<!-- It would be good if the user was not allowed to upload something that is not in one of these three file formats -->
+<!-- <input type="file" name="logo1" size="25" /><br /> -->
+<!-- <input type="file" name="logo2" size="25" /><br /> -->
+<!-- <input type="file" name="logo3" size="25" /></td> -->
+<!-- </tr> -->
 
 <tr>
 <td class="formitem">White space around image: <select name="imagewhitespace">

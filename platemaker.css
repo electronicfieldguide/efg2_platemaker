@@ -70,14 +70,6 @@ td.menubaricon {
 padding-left: 8px;
 padding-right: 8px;
 }
-a {
-color: #003300;
-text-decoration: none;
-}
-a:hover {
-color: #000000;
-text-decoration: underline;
-}
 td.datalist {
 padding-top: 30px;
 padding-left: 10px;
@@ -87,6 +79,14 @@ font-family: sans, helvetica, verdana, arial;
 padding-top: 30px;
 padding-left: 10px;
 vertical-align: top;
+}
+td.uploadnote {
+font-family: sans, helvetica, verdana, arial;
+font-weight: normal;
+font-size: 1em;
+padding-left: 10px;
+padding-top: 2px;
+margin-top: 10px;
 }
 td.datasourcename {
 font-family: sans, helvetica, verdana, arial;
@@ -124,6 +124,24 @@ padding: 6px;
 margin-bottom: 30px;
 background-color: white;
 border: #9C9C9C solid 1px;
+}
+a {
+color: #003300;
+text-decoration: none;
+}
+a:hover {
+color: #000000;
+text-decoration: underline;
+}
+a.upload {
+color: #003300;
+text-decoration: underline;
+font-weight: bold;
+}
+a.upload:hover {
+color: #000000;
+text-decoration: underline;
+font-weight: bold;
 }
 a.pdf {
 font-family: sans, helvetica, verdana, arial;

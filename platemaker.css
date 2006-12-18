@@ -19,6 +19,11 @@ background-color: #dfffba;
 border: #9C9C9C solid 1px;
 margin-bottom: 15px;
 }
+table.viewpage {
+background-color: #dfffba;
+border: #9C9C9C solid 1px;
+margin-bottom: 15px;
+}
 table.pdfpage {
 border: #9C9C9C solid 0px;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd">
-<html xmlns="http://www.w3.org/TR/xhtml1">
+<html>
 <head>
 <title>Plate Maker - printable PDFs for your EFGs</title>
 <link href="platemaker.css" rel="stylesheet" type="text/css" />
@@ -115,7 +115,7 @@ maxlength="3" value="4" /></td>
 </tr>
 
 <tr>
-<td class="formitem" colspan="2">Captions: <span class="configitem"><input type="RADIO" name="captionposition" value="above" />above image</span> <span class="configitem"><input type="RADIO" name= 
+<td class="formitem" colspan="2">Captions: <span class="configitem"><input type="radio" name="captionposition" value="above" />above image</span> <span class="configitem"><input type="radio" name= 
 "captionposition" value="below" />below image</span> 
 <p class="captionrow"><span class="configitem">Text for Row 1:</span> <select name="captiontext1"><!-- Show text fields -->
 <option value="Family">                                                                 Family
@@ -130,8 +130,8 @@ maxlength="3" value="4" /></td>
 <option value="Times">                                                                  Times
 </option>
 </select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext1size" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="CHECKBOX" name="captiontext1format" value="bold" /><span class="boldcheck">bold</span> <input type="CHECKBOX" name="captiontext1format" value="italics" /><span
-class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext1format" value="underline" /><span class="underlinecheck">underline</span></p>
+"configitem">Style:</span> <input type="checkbox" name="captiontext1format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext1format" value="italics" /><span
+class="italicscheck">italics</span> <input type="checkbox" name="captiontext1format" value="underline" /><span class="underlinecheck">underline</span></p>
 
 <p class="captionrow"><span class="configitem">Text for Row 2:</span> <select name="captiontext2"><!-- Show text fields -->
 <option value="Family">                                                                 Family
@@ -146,8 +146,8 @@ class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext1for
 <option value="Times">                                                                  Times
 </option>
 </select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext2size" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="CHECKBOX" name="captiontext2format" value="bold" /><span class="boldcheck">bold</span> <input type="CHECKBOX" name="captiontext2format" value="italics" /><span
-class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext2format" value="underline" /><span class="underlinecheck">underline</span></p>
+"configitem">Style:</span> <input type="checkbox" name="captiontext2format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext2format" value="italics" /><span
+class="italicscheck">italics</span> <input type="checkbox" name="captiontext2format" value="underline" /><span class="underlinecheck">underline</span></p>
 </td>
 </tr>
 
@@ -160,8 +160,8 @@ class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext2for
 <option value="Times">                                                                  Times
 </option>
 </select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="titlesize" size="2" maxlength="3" value="10" /><span class="configitem">Style:</span>
-<input type="CHECKBOX" name="titleformat" value="bold" /><span class="boldcheck">bold</span> <input type="CHECKBOX" name="titleformat" value="italics" /><span class="italicscheck">italics</span>
-<input type="CHECKBOX" name="titleformat" value="underline" /><span class="underlinecheck">underline</span></td>
+<input type="checkbox" name="titleformat" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="titleformat" value="italics" /><span class="italicscheck">italics</span>
+<input type="checkbox" name="titleformat" value="underline" /><span class="underlinecheck">underline</span></td>
 </tr>
 
 <tr>
@@ -173,8 +173,8 @@ class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext2for
 <option value="Times">                                                                  Times
 </option>
 </select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="CHECKBOX" name="subtitleformat" value="bold" /><span class="boldcheck">bold</span> <input type="CHECKBOX" name="subtitleformat" value="italics" /><span class= 
-"italicscheck">italics</span> <input type="CHECKBOX" name="subtitleformat" value="underline" /><span class="underlinecheck">underline</span></td>
+"configitem">Style:</span> <input type="checkbox" name="subtitleformat" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="subtitleformat" value="italics" /><span class= 
+"italicscheck">italics</span> <input type="checkbox" name="subtitleformat" value="underline" /><span class="underlinecheck">underline</span></td>
 </tr>
 
 <tr>
@@ -186,8 +186,8 @@ class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext2for
 <option value="Times">                                                                  Times
 </option>
 </select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="CHECKBOX" name="credits1format" value="bold" /><span class="boldcheck">bold</span> <input type="CHECKBOX" name="credits1format" value="italics" /><span class= 
-"italicscheck">italics</span> <input type="CHECKBOX" name="credits1format" value="underline" /><span class="underlinecheck">underline</span></td>
+"configitem">Style:</span> <input type="checkbox" name="credits1format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="credits1format" value="italics" /><span class= 
+"italicscheck">italics</span> <input type="checkbox" name="credits1format" value="underline" /><span class="underlinecheck">underline</span></td>
 </tr>
 
 <tr>
@@ -199,8 +199,8 @@ class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext2for
 <option value="Times">                                                                  Times
 </option>
 </select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="CHECKBOX" name="credits2format" value="bold" /><span class="boldcheck">bold</span> <input type="CHECKBOX" name="credits2format" value="italics" /><span class= 
-"italicscheck">italics</span> <input type="CHECKBOX" name="credits2format" value="underline" /><span class="underlinecheck">underline</span></td>
+"configitem">Style:</span> <input type="checkbox" name="credits2format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="credits2format" value="italics" /><span class= 
+"italicscheck">italics</span> <input type="checkbox" name="credits2format" value="underline" /><span class="underlinecheck">underline</span></td>
 </tr>
 
 <tr>
@@ -214,8 +214,8 @@ class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext2for
 </tr>
 
 <tr>
-<td class="formitem" COLSPAN="2">Add pre-sized images to use as logos in the credits section <span class="note">(must be .jpg, .gif or .png format, less than 1 inch print size recommended):</span><br>
-<select name="sortby" SIZE="5"><!-- Populate with images that have been uploaded -->
+<td class="formitem" colspan="2">Add pre-sized images to use as logos in the credits section <span class="note">(must be .jpg, .gif or .png format, less than 1 inch print size recommended):</span><br/>
+<select name="sortby" size="5"><!-- Populate with images that have been uploaded -->
 <option value="logo1">logo1
 </option>
 <option value="logo2">logo2
@@ -231,7 +231,7 @@ class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext2for
 </tr>
 
 <tr>
-<td class="uploadnote" COLSPAN="2">(To select multiple images, hold down the Ctrl key. To add additional images, use the <a class="upload" href="/efg2/imageUpload.jsp" target="_blank">Upload interface</a>.)</span> <!-- Link is to image upload page from efg2 config interface-->
+<td class="uploadnote" colspan="2"><span>(To select multiple images, hold down the Ctrl key. To add additional images, use the <a class="upload" href="/efg2/uploadTemplateResources.html#uploadIM" target="_blank">Upload interface</a>.)</span> <!-- Link is to image upload page from efg2 config interface-->
 </td>
 </tr>
 
@@ -313,7 +313,7 @@ class="italicscheck">italics</span> <input type="CHECKBOX" name="captiontext2for
 </tr>
 
 <tr>
-<td class="formitem" colspan="2">Fill space around disproportionate images? <input type="CHECKBOX" name="fillbackground" value="above" /><span class="configitem">yes</span><br />
+<td class="formitem" colspan="2">Fill space around disproportionate images? <input type="checkbox" name="fillbackground" value="above" /><span class="configitem">yes</span><br />
 <span class="note">Select a color:</span> <input type="text" name="boundingboxcolor" class="color" value="#E5E4D4" /></td>
 </tr>
 </table>

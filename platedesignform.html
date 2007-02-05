@@ -47,15 +47,15 @@
 </tr>
 
 <tr>
-<td class="instructions" colspan="2">Design your plates using the items below. Anything that you leave blank will not appear on the plates.</td>
+<td class="instructions" colspan="2">Design your plates using the items below. Any text windows that you leave blank will not appear on the plates.</td>
 </tr>
 
 <tr colspan="2">
-<td class="subheading">General Settings</td>
+<td class="subheading">Data Display Settings</td>
 </tr>
 
 <tr>
-<td class="formitem"><span class="configitem">Sort by:</span> <select name="sortby"><!-- Populate with column headings from datasource -->
+<td class="formitem" colspan="2"><span class="configitem">Sort by:</span> <select name="sortby"><!-- Populate with column headings from datasource -->
 <option value="family">                                                            Family
 </option>
 <option value="genus">                                                            Genus
@@ -63,6 +63,8 @@
 <option value="flowercolor">                                                            Flower Color
 </option>
 </select></td>
+</tr>
+<tr>
 <td class="formitem" colspan="2"><span class="configitem">Image to display:</span> <select name="imagecolumn"><!-- Show only image fields -->
 <option value="flower">                                                            Flower
 </option>
@@ -72,7 +74,10 @@
 </option>
 <option value="ventralview">                                                            Ventral View
 </option>
-</select></td>
+</select>
+<br><span class="subconfigitem"><input type="checkbox" name="imagenumber" value="" /> Show all images (default is to display the first one only)</span>
+<br><span class="subconfigitem"><input type="checkbox" name="showcaptions" value="" /> Always display captions (default is to skip if no image is available)</span>
+</td>
 </tr>
 
 <tr>
@@ -114,10 +119,15 @@ maxlength="3" value="4" /></td>
 <td class="subheading">Text Settings</td>
 </tr>
 
+<tr colspan="2">
+<td class="formitem">Captions can appear either above the image, below the image, or both: </td>
+</tr>
+
 <tr>
-<td class="formitem" colspan="2">Captions: <span class="configitem"><input type="radio" name="captionposition" value="above" />above image</span> <span class="configitem"><input type="radio" name= 
-"captionposition" value="below" />below image</span> 
-<p class="captionrow"><span class="configitem">Text for Row 1:</span> <select name="captiontext1"><!-- Show text fields -->
+<td class="formitemcaption" colspan="2">
+<table class="captions">
+<tr>
+<td class="captionrow"><span class="configitem">Text to Display:</span> <select name="captiontext1"><!-- Show text fields -->
 <option value="Family">                                                                 Family
 </option>
 <option value="Genus">                                                                  Genus
@@ -129,11 +139,12 @@ maxlength="3" value="4" /></td>
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext1size" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="checkbox" name="captiontext1format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext1format" value="italics" /><span
-class="italicscheck">italics</span> <input type="checkbox" name="captiontext1format" value="underline" /><span class="underlinecheck">underline</span></p>
-
-<p class="captionrow"><span class="configitem">Text for Row 2:</span> <select name="captiontext2"><!-- Show text fields -->
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext1size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext1format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext1format" value="italics" /><span
+class="italicscheck">italics</span> <input type="checkbox" name="captiontext1format" value="underline" /><span class="underlinecheck">underline</span>
+</td>
+</tr>
+<tr>
+<td class="captionrow"><span class="configitem">Text to Display:</span> <select name="captiontext2"><!-- Show text fields -->
 <option value="Family">                                                                 Family
 </option>
 <option value="Genus">                                                                  Genus
@@ -145,9 +156,55 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext1for
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext2size" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="checkbox" name="captiontext2format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext2format" value="italics" /><span
-class="italicscheck">italics</span> <input type="checkbox" name="captiontext2format" value="underline" /><span class="underlinecheck">underline</span></p>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext2size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext2format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext2format" value="italics" /><span
+class="italicscheck">italics</span> <input type="checkbox" name="captiontext2format" value="underline" /><span class="underlinecheck">underline</span></td>
+</tr>
+<tr>
+<td class="captionbutton"><input class="addrow" type="submit" name="Add new row" value="Add new row" />
+<!-- When user clicks Add button, another row like the one above appears, allowing him/her to add another field as a line in the caption -->
+</td>
+</tr>
+<tr>
+<td class="sampleimage"><img src="sampledragonfly.jpg" width="200" height="162" title="Sample Image" border="1" alt="Sample Image"></td>
+</tr>
+<tr>
+<td class="captionrow"><span class="configitem">Text to Display:</span> <select name="captiontext3"><!-- Show text fields -->
+<option value="Family">                                                                 Family
+</option>
+<option value="Genus">                                                                  Genus
+</option>
+<option value="Common Name">                                                            Common Name
+</option>
+</select> <span class="configitem">Font:</span> <select name="captiontext3font"><!-- Show built in fonts? -->
+<option value="Arial">                                                                  Arial
+</option>
+<option value="Times">                                                                  Times
+</option>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext3size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext3format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext3format" value="italics" /><span
+class="italicscheck">italics</span> <input type="checkbox" name="captiontext3format" value="underline" /><span class="underlinecheck">underline</span></td>
+</tr>
+<tr>
+<td class="captionrow"><span class="configitem">Text to Display:</span> <select name="captiontext4"><!-- Show text fields -->
+<option value="Family">                                                                 Family
+</option>
+<option value="Genus">                                                                  Genus
+</option>
+<option value="Common Name">                                                            Common Name
+</option>
+</select> <span class="configitem">Font:</span> <select name="captiontext4font"><!-- Show built in fonts? -->
+<option value="Arial">                                                                  Arial
+</option>
+<option value="Times">                                                                  Times
+</option>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext4size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext4format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext4format" value="italics" /><span
+class="italicscheck">italics</span> <input type="checkbox" name="captiontext4format" value="underline" /><span class="underlinecheck">underline</span></td>
+</tr>
+<tr>
+<td class="captionbutton"><input class="addrow" type="submit" name="Add new row" value="Add new row" />
+<!-- When user clicks Add button, another row like the one above appears, allowing him/her to add another field as a line in the caption -->
+</td>
+</tr>
+</table>
 </td>
 </tr>
 
@@ -159,8 +216,7 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext2for
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="titlesize" size="2" maxlength="3" value="10" /><span class="configitem">Style:</span>
-<input type="checkbox" name="titleformat" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="titleformat" value="italics" /><span class="italicscheck">italics</span>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="titlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="titleformat" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="titleformat" value="italics" /><span class="italicscheck">italics</span>
 <input type="checkbox" name="titleformat" value="underline" /><span class="underlinecheck">underline</span></td>
 </tr>
 
@@ -172,8 +228,7 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext2for
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="checkbox" name="subtitleformat" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="subtitleformat" value="italics" /><span class= 
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="subtitleformat" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="subtitleformat" value="italics" /><span class= 
 "italicscheck">italics</span> <input type="checkbox" name="subtitleformat" value="underline" /><span class="underlinecheck">underline</span></td>
 </tr>
 
@@ -185,8 +240,7 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext2for
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="checkbox" name="credits1format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="credits1format" value="italics" /><span class= 
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="credits1format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="credits1format" value="italics" /><span class= 
 "italicscheck">italics</span> <input type="checkbox" name="credits1format" value="underline" /><span class="underlinecheck">underline</span></td>
 </tr>
 
@@ -198,8 +252,7 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext2for
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /><span class=
-"configitem">Style:</span> <input type="checkbox" name="credits2format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="credits2format" value="italics" /><span class= 
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="credits2format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="credits2format" value="italics" /><span class= 
 "italicscheck">italics</span> <input type="checkbox" name="credits2format" value="underline" /><span class="underlinecheck">underline</span></td>
 </tr>
 
@@ -210,7 +263,7 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext2for
 </tr>
 
 <tr colspan="2">
-<td class="subheading">Image and Color Settings</td>
+<td class="subheading">Logos and Color Settings</td>
 </tr>
 
 <tr>
@@ -312,10 +365,6 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext2for
  <span class="configitem">Select a color: <span><input type="text" name="boundingboxcolor" class="color" value="#57BA6B" /></span></span></td>
 </tr>
 
-<tr>
-<td class="formitem" colspan="2">Fill space around disproportionate images? <input type="checkbox" name="fillbackground" value="above" /><span class="configitem">yes</span><br />
-<span class="note">Select a color:</span> <input type="text" name="boundingboxcolor" class="color" value="#E5E4D4" /></td>
-</tr>
 </table>
 
 <input type="submit" name="Submit" value="Submit" /></form>

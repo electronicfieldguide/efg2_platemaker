@@ -99,7 +99,9 @@ maxlength="3" value="4" /></td>
 </option>
 <option value="5x7">                                                            5" x 7"
 </option>
-</select></td>
+</select><br />
+<span class="subconfigitem"><input type="checkbox" name="orientation" value="portrait" CHECKED />portrait <input type="checkbox" name="orientation" value="landscape" />landscape</span>
+</td>
 </tr>
 
 <!-- submitting enhancement request for the following: -->
@@ -120,105 +122,118 @@ maxlength="3" value="4" /></td>
 </tr>
 
 <tr colspan="2">
-<td class="formitem">Captions can appear either above the image, below the image, or both: </td>
+<td class="formitem">Image Captions:</td>
 </tr>
 
 <tr>
 <td class="formitemcaption" colspan="2">
 <table class="captions">
 <tr>
-<td class="captionrow"><span class="configitem">Field:</span> <select name="captiontext1"><!-- Show text fields -->
+<td class="captionrow"><span class="configitemfield">Field:</span> <select name="captiontext1"><!-- Show text fields -->
 <option value="Family">                                                                 Family
 </option>
 <option value="Genus">                                                                  Genus
 </option>
 <option value="Common Name">                                                            Common Name
 </option>
-</select> <span class="configitem">Font:</span> <select name="captiontext1font"><!-- Show built in fonts? -->
+</select>
+<p class="captionline"><span class="configitem">Font:</span> <select name="captiontext1font"><!-- Show built in fonts? -->
 <option value="Arial">                                                                  Arial
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext1size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext1format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext1format" value="italics" /><span
-class="italicscheck">italics</span> <input type="checkbox" name="captiontext1format" value="underline" /><span class="underlinecheck">underline</span>
-<span class="configitem">Align:</span> <input type="radio" name="captiontext1align" value="left" CHECKED />
-<span class="align">left</span> <input type="radio" name="captiontext1align" value="center" />
-<span class="align">center</span> <input type="radio" name="captiontext1align" value="right" />
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext1size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext1format" value="bold" title="bold" /><span class="boldcheck" title="bold">B</span> <input type="checkbox" name="captiontext1format" value="italics" title="italics" /><span
+class="italicscheck" title="italics">i</span> <input type="checkbox" name="captiontext1format" value="underline" title="underline" /><span class="underlinecheck" title="underline">u</span>
+<span class="configitem">Align:</span> <input class="align" type="radio" name="captiontext1align" value="left" CHECKED />
+<span class="align">left</span> <input class="align" type="radio" name="captiontext1align" value="center" />
+<span class="align">center</span> <input class="align" type="radio" name="captiontext1align" value="right" />
 <span class="align">right</span>
+</p>
 </td>
 </tr>
 <tr>
-<td class="captionrow"><span class="configitem">Field:</span> <select name="captiontext2"><!-- Show text fields -->
+<td class="captionrow"><span class="configitemfield">Field:</span> <select name="captiontext2"><!-- Show text fields -->
 <option value="Family">                                                                 Family
 </option>
 <option value="Genus">                                                                  Genus
 </option>
 <option value="Common Name">                                                            Common Name
 </option>
-</select> <span class="configitem">Font:</span> <select name="captiontext2font"><!-- Show built in fonts? -->
+</select>
+<p class="captionline"><span class="configitem">Font:</span> <select name="captiontext2font"><!-- Show built in fonts? -->
 <option value="Arial">                                                                  Arial
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext2size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext2format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext2format" value="italics" /><span
-class="italicscheck">italics</span> <input type="checkbox" name="captiontext2format" value="underline" /><span class="underlinecheck">underline</span>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext2size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext2format" value="bold" title="bold" /><span class="boldcheck" title="bold">B</span> <input type="checkbox" name="captiontext2format" value="italics" title="italics" /><span
+class="italicscheck" title="italics">i</span> <input type="checkbox" name="captiontext2format" value="underline" title="underline" /><span class="underlinecheck" title="underline">u</span>
 <span class="configitem">Align:</span> <input type="radio" name="captiontext2align" value="left" CHECKED />
 <span class="align">left</span> <input type="radio" name="captiontext2align" value="center" />
 <span class="align">center</span> <input type="radio" name="captiontext2align" value="right" />
 <span class="align">right</span>
+</p>
 </td>
 </tr>
 <tr>
-<td class="captionbutton"><input class="addrow" type="submit" name="Add new row" value="Add new row" />
+<td class="captionbutton"><input class="addrow" type="submit" name="Add new row" value="Add row" />
 <!-- When user clicks Add button, another row like the one above appears, allowing him/her to add another field as a line in the caption -->
 </td>
 </tr>
 <tr>
-<td class="sampleimage"><img src="sampledragonfly.jpg" width="200" height="162" title="Sample Image" border="1" alt="Sample Image"></td>
+<td class="sampleimage"><img src="sampledragonfly.jpg" width="200" height="162" title="Sample Image" border="1" alt="Sample Image">
+<span class="configitem">Align Image:</span> <input class="align" type="radio" name="imagealign" value="left" CHECKED />
+<span class="align">left</span> <input class="align" type="radio" name="imagealign" value="center" />
+<span class="align">center</span> <input class="align" type="radio" name="imagealign" value="right" />
+<span class="align">right</span>
+</td>
 </tr>
 <tr>
-<td class="captionrow"><span class="configitem">Field:</span> <select name="captiontext3"><!-- Show text fields -->
+<td class="captionrow"><span class="configitemfield">Field:</span> <select name="captiontext3"><!-- Show text fields -->
 <option value="Family">                                                                 Family
 </option>
 <option value="Genus">                                                                  Genus
 </option>
 <option value="Common Name">                                                            Common Name
 </option>
-</select> <span class="configitem">Font:</span> <select name="captiontext3font"><!-- Show built in fonts? -->
+</select>
+<p class="captionline"><span class="configitem">Font:</span> <select name="captiontext3font"><!-- Show built in fonts? -->
 <option value="Arial">                                                                  Arial
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext3size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext3format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext3format" value="italics" /><span
-class="italicscheck">italics</span> <input type="checkbox" name="captiontext3format" value="underline" /><span class="underlinecheck">underline</span>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext3size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext3format" value="bold" title="bold" /><span class="boldcheck" title="bold">B</span> <input type="checkbox" name="captiontext3format" value="italics" title="italics" /><span
+class="italicscheck" title="italics">i</span> <input type="checkbox" name="captiontext3format" value="underline" title="underline" /><span class="underlinecheck" title="underline">u</span>
 <span class="configitem">Align:</span> <input type="radio" name="captiontext3align" value="left" CHECKED />
 <span class="align">left</span> <input type="radio" name="captiontext3align" value="center" />
 <span class="align">center</span> <input type="radio" name="captiontext3align" value="right" />
 <span class="align">right</span>
+</p>
 </td>
 </tr>
 <tr>
-<td class="captionrow"><span class="configitem">Field:</span> <select name="captiontext4"><!-- Show text fields -->
+<td class="captionrow"><span class="configitemfield">Field:</span> <select name="captiontext4"><!-- Show text fields -->
 <option value="Family">                                                                 Family
 </option>
 <option value="Genus">                                                                  Genus
 </option>
 <option value="Common Name">                                                            Common Name
 </option>
-</select> <span class="configitem">Font:</span> <select name="captiontext4font"><!-- Show built in fonts? -->
+</select>
+<p class="captionline"><span class="configitem">Font:</span> <select name="captiontext4font"><!-- Show built in fonts? -->
 <option value="Arial">                                                                  Arial
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext4size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext4format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="captiontext4format" value="italics" /><span class="italicscheck">italics</span> <input type="checkbox" name="captiontext4format" value="underline" /><span class="underlinecheck">underline</span> 
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="captiontext4size" size="2" maxlength="3" value="10" /> <input type="checkbox" name="captiontext4format" value="bold" title="bold" /><span class="boldcheck" title="bold">B</span> <input type="checkbox" name="captiontext4format" value="italics" title="italics" /><span class="italicscheck" title="italics">i</span> <input type="checkbox" name="captiontext4format" value="underline" title="underline" /><span class="underlinecheck" title="underline">u</span> 
 <span class="configitem">Align:</span> <input type="radio" name="captiontext4align" value="left" CHECKED />
 <span class="align">left</span> <input type="radio" name="captiontext4align" value="center" />
 <span class="align">center</span> <input type="radio" name="captiontext4align" value="right" />
 <span class="align">right</span>
+</p>
 </td>
 </tr>
 <tr>
-<td class="captionbutton"><input class="addrow" type="submit" name="Add new row" value="Add new row" />
+<td class="captionbutton"><input class="addrow" type="submit" name="Add new row" value="Add row" />
 <!-- When user clicks Add button, another row like the one above appears, allowing him/her to add another field as a line in the caption -->
 </td>
 </tr>
@@ -227,51 +242,51 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext3for
 </tr>
 
 <tr>
-<td class="formitem" colspan="2"><input type="text" name="title" size="50" value="Main Title Goes Here" /> 
+<td class="formitem" colspan="2"><span class="formitemtitle">Title: </span><input type="text" name="title" size="54" value="Main Title Goes Here" /> 
 <!-- I want the default text to disappear as soon as the author clicks in that text window but I do not know how to do that --> <span class="configitem">Font:</span> <select name="maintitlefont">
 <!-- Show built in fonts? -->
 <option value="Arial">                                                                  Arial
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="titlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="titleformat" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="titleformat" value="italics" /><span class="italicscheck">italics</span>
-<input type="checkbox" name="titleformat" value="underline" /><span class="underlinecheck">underline</span></td>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="titlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="titleformat" value="bold" title="bold" /><span class="boldcheck" title="bold">B</span> <input type="checkbox" name="titleformat" value="italics" title="italics" /><span class="italicscheck" title="italics">i</span>
+<input type="checkbox" name="titleformat" value="underline" title="underline" /><span class="underlinecheck" title="underline">u</span></td>
 </tr>
 
 <tr>
-<td class="formitem" colspan="2"><input type="text" name="subtitle" size="50" value="Subtitle Goes Here" /> 
+<td class="formitem" colspan="2"><span class="formitemtitle">Subtitle: </span><input type="text" name="subtitle" size="51" value="Subtitle Goes Here" /> 
 <!-- I want the default text to disappear as soon as the author clicks in that text window but I do not know how to do that --> <span class="configitem">Font:</span> <select name="subtitlefont">
 <!-- Show built in fonts? -->
 <option value="Arial">                                                                  Arial
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="subtitleformat" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="subtitleformat" value="italics" /><span class= 
-"italicscheck">italics</span> <input type="checkbox" name="subtitleformat" value="underline" /><span class="underlinecheck">underline</span></td>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="subtitleformat" value="bold" title="bold" /><span class="boldcheck" title="bold">B</span> <input type="checkbox" name="subtitleformat" value="italics" title="italics" /><span class= 
+"italicscheck" title="italics">i</span> <input type="checkbox" name="subtitleformat" value="underline" title="underline" /><span class="underlinecheck" title="underline">u</span></td>
 </tr>
 
 <tr>
-<td class="formitem" colspan="2"><input type="text" name="credits1" size="50" value="Credits/Copyright Info Goes Here" /> 
+<td class="formitem" colspan="2"><span class="formitemtitle">Credits 1: </span><input type="text" name="credits1" size="50" value="Credits/Copyright Info Goes Here" /> 
 <!-- I want the default text to disappear as soon as the author clicks in that text window but I do not know how to do that --> <span class="configitem">Font:</span> <select name="credits1font">
 <!-- Show built in fonts? -->
 <option value="Arial">                                                                  Arial
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="credits1format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="credits1format" value="italics" /><span class= 
-"italicscheck">italics</span> <input type="checkbox" name="credits1format" value="underline" /><span class="underlinecheck">underline</span></td>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="credits1format" value="bold" title="bold" /><span class="boldcheck" title="bold">B</span> <input type="checkbox" name="credits1format" value="italics" title="italics" /><span class= 
+"italicscheck" title="italics">i</span> <input type="checkbox" name="credits1format" value="underline" title="underline" /><span class="underlinecheck" title="underline">u</span></td>
 </tr>
 
 <tr>
-<td class="formitem" colspan="2"><input type="text" name="credits2" size="50" value="Credits/Copyright Info Goes Here" /> 
+<td class="formitem" colspan="2"><span class="formitemtitle">Credits 2: </span><input type="text" name="credits2" size="50" value="Credits/Copyright Info Goes Here" /> 
 <!-- I want the default text to disappear as soon as the author clicks in that text window but I do not know how to do that --> <span class="configitem">Font:</span> <select name="credits2font">
 <!-- Show built in fonts? -->
 <option value="Arial">                                                                  Arial
 </option>
 <option value="Times">                                                                  Times
 </option>
-</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="credits2format" value="bold" /><span class="boldcheck">bold</span> <input type="checkbox" name="credits2format" value="italics" /><span class= 
-"italicscheck">italics</span> <input type="checkbox" name="credits2format" value="underline" /><span class="underlinecheck">underline</span></td>
+</select><span class="configitem">Size</span> <span class="note">(6 to 100 pt):</span> <input type="text" name="subtitlesize" size="2" maxlength="3" value="10" /> <input type="checkbox" name="credits2format" value="bold" title="bold" /><span class="boldcheck" title="bold">B</span> <input type="checkbox" name="credits2format" value="italics" title="italics" /><span class= 
+"italicscheck" title="italics">i</span> <input type="checkbox" name="credits2format" value="underline" title="underline" /><span class="underlinecheck" title="underline">u</span></td>
 </tr>
 
 <tr>
@@ -315,7 +330,7 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext3for
 <!-- <input type="file" name="logo3" size="25" /></td> -->
 <!-- </tr> -->
 
-<tr>
+<!-- <tr>
 <td class="formitem">White space around image: <select name="imagewhitespace">
 <option value="0 (none)">                                                            0 (none)
 </option>
@@ -329,8 +344,8 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext3for
 </option>
 <option value="5">                                                            5
 </option>
-</select></td>
-<td class="formitem">White space between elements <span class="note">(image plus captions):</span> <select name="elementwhitespace">
+</select></td> -->
+<!-- <td class="formitem">White space between elements <span class="note">(image plus captions):</span> <select name="elementwhitespace">
 <option value="0 (none)">                                                            0 (none)
 </option>
 <option value="1">                                                            1
@@ -345,6 +360,7 @@ class="italicscheck">italics</span> <input type="checkbox" name="captiontext3for
 </option>
 </select></td>
 </tr>
+ -->
 
 <tr>
 <td class="formitem">Frame around image:<br />
